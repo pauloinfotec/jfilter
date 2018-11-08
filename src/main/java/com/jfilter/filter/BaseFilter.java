@@ -1,5 +1,8 @@
 package com.jfilter.filter;
 
+import com.jfilter.annotation.FilterField;
+import com.jfilter.annotation.FilterFieldOperatorType;
+import com.jfilter.annotation.FilterFieldPredicateType;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.dsl.EntityPathBase;
@@ -12,6 +15,9 @@ public abstract class BaseFilter implements Serializable {
 
     private Integer page = 1;
     private Integer count = 10;
+
+    @FilterField(name = "active", operator = FilterFieldOperatorType.AND, type = FilterFieldPredicateType.EQUAL)
+    protected Boolean active = true;
 
     public Integer getFirstResult() {
         if (page != null && count != null) {

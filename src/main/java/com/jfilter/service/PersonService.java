@@ -5,13 +5,11 @@ import com.jfilter.model.QPerson;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.List;
 
-public class PersonService {
+public class PersonService extends BaseService<Person> {
 
-    private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("TestPersistence");
+
 
 
     public List<Person> findAll(){

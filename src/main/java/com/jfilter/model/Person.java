@@ -2,23 +2,14 @@ package com.jfilter.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.util.Objects;
 
 
 @Entity
 @Data
-public class Person {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
-
-    private boolean ativo = true;
+public class Person extends ModelBase {
 
     @Column(nullable = false, length = 50)
     private String name;
@@ -28,13 +19,13 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return ativo == person.ativo &&
+        return active == person.active &&
                 Objects.equals(id, person.id) &&
                 Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, ativo, name);
+        return Objects.hash(id, active, name);
     }
 }

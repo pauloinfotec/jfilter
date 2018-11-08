@@ -66,6 +66,11 @@
             <version>9.4-1201-jdbc41</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
     </dependencies>
 
     <build>

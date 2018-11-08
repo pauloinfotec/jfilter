@@ -9,7 +9,7 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/jfilter" /> <!-- BD Mane -->
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="postgres" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="false" />
             <property name="hibernate.format_sql" value="false" />
         </properties>
