@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>jfilter</name>
+    <url>http://www.example.com</url>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
